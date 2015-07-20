@@ -19,25 +19,25 @@ test('Programmatic API:  Sticks a string at the end of the docs.', (is) => {
   const output = append('c')(input);
 
   is.deepEqual(
-    output.data.map(property('output')),
+    output.docs.map(property('output')),
     ['a', 'b', 'c'],
     'pushes the input onto docs'
   );
 
   is.deepEqual(
-    last(output.data),
+    last(output.docs),
     {output: 'c'},
     'not populating any other property'
   );
 
   is.deepEqual(
-    assign({}, output, {data: butLast(output.data)}),
+    assign({}, output, {docs: butLast(output.docs)}),
     input,
     'leaving the rest of the data intact'
   );
 
   is.equal(
-    last(append({toString: () => 'd'})(input).data).output,
+    last(append({toString: () => 'd'})(input).docs).output,
     'd',
     'casts input to string'
   );
