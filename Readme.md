@@ -52,14 +52,20 @@ A plugin for **[doxie][]**.
 CLI Usage
 ---------
 
-`doxie --append` is a plugin for the command-line tool **[doxie][]**. Many plugins are designed for **[dox][]** data. Install all three if you haven’t already:
+`doxie --append` is a plugin for the command-line tool **[doxie][]**. Install both if you haven’t already:
 
 ```sh
 $ npm install --global dox doxie doxie.append
 ```
 
 
-…
+Any string you `--append` will be appended at the end of your docs:
+
+```sh
+$ echo '[]' | doxie --append 'a b c\n' --append 'def\n' --output
+a b c
+def
+```
 
 
 [dox]:                http://npm.im/dox
@@ -76,6 +82,25 @@ Programmatic usage
 
 ```sh
 $ npm install doxie-core doxie.append
+```
+
+
+Pass a single string to `doxie.append` to instantiate the plugin:
+
+```js
+const doxie = require('doxie-core');
+const render = require('doxie.render');
+const append = require('doxie.append');
+const output = require('doxie.output');
+
+const myDoxData = [{isPrivate: true}, {isPrivate: false}, {isPrivate: false}];
+
+doxie([
+  render(({data}) => `${data.isPrivate ? 'Sshhh…' : 'Boom!'}\n`),
+  append('AAAAAAA!\n'),
+  output(),
+])(myDoxData).output;
+//» "Sshhh…\nBoom!\nBoom!\nAAAAAAA!\n"
 ```
 
 
