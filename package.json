@@ -1,7 +1,9 @@
 { "name": "doxie.append"
 , "version": "0.0.0-work-in-progress"
 , "description": "Add a string at the end of your docs."
-, "dependencies": {}
+, "dependencies":
+  { "object-assign": "^3.0.0"
+  }
 , "scripts":
   { "clean": "git reset && echo '/node_modules/' > .gitignore && git add .gitignore && git stash save --include-untracked --keep-index '`npm run clean` trash can' && git clean --force -d && git reset --hard && echo '\nclean: Uncommitted and ignored files have been moved to git’s stash. To restore them run `git stash pop --quiet; git checkout .gitignore`.'"
   , "coverage": "rm -rf coverage && npm run test:transpile && cd .es5 && istanbul cover test.js && mv coverage .."
@@ -17,8 +19,10 @@
   , "view-coverage": "echo 'Generating coverage reports...'; npm run coverage >/dev/null && echo '...done.' && opn ./coverage/lcov-report/index.html >/dev/null"
   }
 , "devDependencies":
-  { "babel": "5.6.23"
+  { "1-liners": "0.3.5"
+  , "babel": "5.6.23"
   , "coveralls": "2.11.3"
+  , "doxie-dummy": "0.2.0"
   , "format-json": "1.0.3"
   , "istanbul": "0.3.17"
   , "jshint": "2.8.0"
