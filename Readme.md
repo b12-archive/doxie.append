@@ -52,7 +52,7 @@ A plugin for **[doxie][]**.
 CLI Usage
 ---------
 
-`doxie --append` is a plugin for the command-line tool **[doxie][]**. Install both if you haven’t already:
+`doxie --append` is a plugin for the command-line tool **[doxie][]**. Many plugins are designed for **[dox][]** data. Install all three if you haven’t already:
 
 ```sh
 $ npm install --global dox doxie doxie.append
@@ -62,7 +62,7 @@ $ npm install --global dox doxie doxie.append
 Any string you `--append` will be appended at the end of your docs:
 
 ```sh
-$ echo '[]' | doxie --append 'a b c\n' --append 'def\n' --output
+$ echo '' | dox | doxie --append 'a b c\n' --append 'def\n' --output
 a b c
 def
 ```
