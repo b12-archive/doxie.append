@@ -36,7 +36,7 @@ A plugin for **[doxie][]**.
   <br/>
   <br/>
   <img
-    src="Readme/….gif"
+    src="Readme/Balls.gif"
     width="400"
     height="300"
   />
