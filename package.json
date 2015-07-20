@@ -1,5 +1,5 @@
 { "name": "doxie.append"
-, "version": "0.0.0-work-in-progress"
+, "version": "0.1.0"
 , "description": "Add a string at the end of your docs."
 , "dependencies":
   { "object-assign": "^3.0.0"
