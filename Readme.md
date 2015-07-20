@@ -1,12 +1,12 @@
 [![Coveralls – test coverage
-](https://img.shields.io/coveralls/studio-b12/doxie.….svg?style=flat-square)
-](https://coveralls.io/r/studio-b12/doxie.…)
+](https://img.shields.io/coveralls/studio-b12/doxie.append.svg?style=flat-square)
+](https://coveralls.io/r/studio-b12/doxie.append)
  [![Travis – build status
-](https://img.shields.io/travis/studio-b12/doxie.…/master.svg?style=flat-square)
-](https://travis-ci.org/studio-b12/doxie.…)
+](https://img.shields.io/travis/studio-b12/doxie.append/master.svg?style=flat-square)
+](https://travis-ci.org/studio-b12/doxie.append)
  [![David – status of dependencies
-](https://img.shields.io/david/studio-b12/doxie.….svg?style=flat-square)
-](https://david-dm.org/studio-b12/doxie.…)
+](https://img.shields.io/david/studio-b12/doxie.append.svg?style=flat-square)
+](https://david-dm.org/studio-b12/doxie.append)
  [![Stability: experimental
 ](https://img.shields.io/badge/stability-experimental-yellow.svg?style=flat-square)
 ](https://nodejs.org/api/documentation.html#documentation_stability_index)
@@ -18,11 +18,11 @@
 
 
 <h1                                                                 id="/"><pre>
-doxie --…
+doxie --append
 </pre></h1>
 
 A plugin for **[doxie][]**.  
-**…**
+**Add a string at the end of your docs.**
 
 [doxie]:  https://github.com/studio-b12/doxie
 
@@ -52,10 +52,10 @@ A plugin for **[doxie][]**.
 CLI Usage
 ---------
 
-`doxie --…` is a plugin for the command-line tool **[doxie][]**. Many plugins are designed for **[dox][]** data. Install all three if you haven’t already:
+`doxie --append` is a plugin for the command-line tool **[doxie][]**. Many plugins are designed for **[dox][]** data. Install all three if you haven’t already:
 
 ```sh
-$ npm install --global dox doxie doxie.…
+$ npm install --global dox doxie doxie.append
 ```
 
 
@@ -72,10 +72,10 @@ $ npm install --global dox doxie doxie.…
 Programmatic usage
 ------------------
 
-`doxie.…` can be used directly with **[doxie-core][]** – the backend of **[doxie][]**. Install both if you haven’t already:
+`doxie.append` can be used directly with **[doxie-core][]** – the backend of **[doxie][]**. Install both if you haven’t already:
 
 ```sh
-$ npm install doxie-core doxie.…
+$ npm install doxie-core doxie.append
 ```
 
 
