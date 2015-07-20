@@ -21,7 +21,7 @@ test('Programmatic API:  Sticks a string at the end of the docs.', (is) => {
   is.deepEqual(
     output.docs.map(property('output')),
     ['a', 'b', 'c'],
-    'pushes the input onto docs'
+    'pushes the input onto the docs'
   );
 
   is.deepEqual(
@@ -33,7 +33,7 @@ test('Programmatic API:  Sticks a string at the end of the docs.', (is) => {
   is.deepEqual(
     assign({}, output, {docs: butLast(output.docs)}),
     input,
-    'leaving the rest of the data intact'
+    'leaving other docs intact'
   );
 
   is.equal(
